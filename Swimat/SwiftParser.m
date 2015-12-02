@@ -149,7 +149,7 @@ NSUInteger strIndex;
 				subIndex = [subString nextNonSpaceIndex:subIndex defaults:subIndex];
 				NSUInteger newIndex = [self addStringToNext:@"\n" withOffset:subIndex edit:orderStr withString:subString];
 				for (int i = 0; i < indent; i++) {
-					[orderStr appendString:@"\t"];
+					[orderStr appendString:@" "];
 				}
 				subIndex = newIndex;
 				if (subIndex < subString.length) {
@@ -388,7 +388,7 @@ NSUInteger strIndex;
 		onetimeIndent -= 1;
 	}
 	for (int i = 0; i < indent + onetimeIndent; i++) {
-		[editString appendString:@"\t"];
+		[editString appendString:@" "];
 	}
 	onetimeIndent = 0;
 	return nextIndex;
